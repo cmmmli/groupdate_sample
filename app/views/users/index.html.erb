@@ -2,6 +2,27 @@
 
 <h1>Users</h1>
 
+<h3>Number of users per creation date</h3>
+
+<table>
+  <thead>
+    <tr>
+      <td>Day</td>
+      <td>count</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_groups.each do |day, count| %>
+      <tr>
+        <td><%= day %></td>
+        <td><%= count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>users</h3>
+
 <table>
   <thead>
     <tr>

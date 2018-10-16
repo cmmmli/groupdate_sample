@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @user_groups = User.group_by_day(:created_at).count
     @users = User.all
   end
 
