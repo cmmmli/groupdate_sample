@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+50.times do |i|
+  user = User.create(
+    name: Faker::Name.first_name,
+    created_at: Faker::Time.backward(10)
+  )
+end
